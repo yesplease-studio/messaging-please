@@ -1,5 +1,7 @@
 # messaging-please
 
+<img width="1584" height="396" alt="Github-messaging-please" src="https://github.com/user-attachments/assets/72858562-e78e-41d3-9181-c22c521852b3" />
+
 An open-source, AI-native framework for building messaging architecture grounded in purpose, positioning, and audience context.
 
 Takes purpose, ICP, stakeholder structure, and competitive context as raw material. Builds the full chain from why you exist to what you say to each person in a buying decision -- and produces artifacts that feed directly into your sales motion, product narrative, and voice system. Built to be used with [Claude Code](https://claude.ai/code).
