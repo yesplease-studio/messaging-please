@@ -1,0 +1,41 @@
+name: messaging-gtm
+description: >
+  GTM narrative workflow. Translates a complete message architecture into
+  a go-to-market narrative -- sales arc, product narrative, pricing framing --
+  and produces explicit handoff notes for sales-please, prd-please, and
+  voice-please. Run after messaging-foundations is complete.
+
+steps:
+  - id: bridge
+    skill: messaging-bridge
+    description: "Translate message architecture into GTM narrative and sibling handoffs"
+    output: messaging/gtm-narrative.md
+    inputs:
+      - messaging/purpose-brief.md
+      - messaging/positioning-statement.md
+      - messaging/audience-map.md
+      - messaging/message-architecture.md
+      - config/profile.md
+
+handoffs:
+  - to: sales-please
+    when: "GTM narrative is complete and the team is ready to operationalize in the pipeline"
+    artifact: messaging/gtm-narrative.md
+    note: >
+      Bring the sales narrative arc and per-audience message entries to sales-please.
+      The message architecture gives the sales team what to say; sales-please provides
+      the qualification framework for deciding which deals deserve the story.
+
+  - to: prd-please
+    when: "GTM narrative is complete and the product narrative section needs to become a spec"
+    artifact: messaging/gtm-narrative.md
+    note: >
+      The positioning statement and product narrative section map directly to the
+      positioning and messaging sections of the Strategic PRD template.
+
+  - to: voice-please
+    when: "GTM narrative is complete and voice encoding is the next step"
+    artifact: messaging/message-architecture.md
+    note: >
+      Audience register notes from message-architecture.md feed the voice-please
+      register map. Run voice-discover or voice-author with these as direct input.

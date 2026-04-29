@@ -1,0 +1,50 @@
+name: messaging-foundations
+description: >
+  Full foundations workflow. Establishes purpose, mission, vision, ICP, and
+  positioning statement, then builds per-audience message architecture. Use this
+  for new engagements or when the messaging foundation needs to be rebuilt from
+  scratch. Produces all five messaging artifacts by the end.
+
+steps:
+  - id: setup
+    skill: onboarding
+    source: SETUP.md
+    output: config/profile.md
+    condition: "profile does not exist"
+    description: "Create company profile if none exists"
+
+  - id: discover
+    skill: messaging-discover
+    description: "Establish purpose, mission, vision, ICP, and positioning statement"
+    outputs:
+      - messaging/purpose-brief.md
+      - messaging/positioning-statement.md
+    inputs:
+      - config/profile.md
+
+  - id: architect
+    skill: messaging-architect
+    description: "Map stakeholder structure and build per-audience message architecture"
+    outputs:
+      - messaging/audience-map.md
+      - messaging/message-architecture.md
+    inputs:
+      - messaging/purpose-brief.md
+      - messaging/positioning-statement.md
+      - config/profile.md
+
+handoffs:
+  - to: messaging-bridge
+    when: "audience-map.md and message-architecture.md are complete"
+    artifact: messaging/message-architecture.md
+    note: "Run messaging-gtm workflow to translate architecture into GTM narrative"
+
+  - to: sales-please
+    when: "Message architecture is complete and sales operationalization is the next priority"
+    artifact: messaging/message-architecture.md
+    note: "Per-audience core claims and objection responses feed outbound sequences and discovery scripts"
+
+  - to: voice-please
+    when: "Register notes from message-architecture.md are ready"
+    artifact: messaging/message-architecture.md
+    note: "Audience register notes feed the voice-please register map and audience language bank"
