@@ -12,6 +12,12 @@ updated: ""   # YYYY-MM-DD
 
 [One to three sentences. Specific to this company -- should not apply equally to every competitor in the category.]
 
+**Underlying motive:** [The human motive this purpose expresses, named in a word or two -- e.g. "extending human reach," "making solving abundant." This is the thing that was actually chosen; the sentence above is one expression of it.]
+
+**Alternates considered:** [Other motives or phrasings weighed and set aside, with a word on why. Keeps the decision legible and gives somewhere to return if the purpose is revisited.]
+
+**Passes the level tests:** [ ] no technology/product nouns &nbsp; [ ] answers "the vision is worth wanting because…" &nbsp; [ ] a competitor couldn't lift it verbatim
+
 ## Mission
 
 *What the company commits to doing right now, in service of that purpose.*

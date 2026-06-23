@@ -1,4 +1,6 @@
 .DS_Store
 *.swp
 *.swo
-messaging/
+# Anchored to repo root so it only ignores a generated top-level output dir,
+# not systems/messaging/ (which holds the tracked SYSTEM.md methodology).
+/messaging/

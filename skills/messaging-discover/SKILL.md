@@ -82,7 +82,14 @@ Probe if the answer is product-focused ("we saw a gap in the market for X"). The
 
 *Why we ask: In many companies (especially B2B SaaS), the buyer is not the person whose life changes. Understanding the downstream beneficiary often reveals a purpose the company hasn't articulated yet. It's also what makes purpose feel real rather than corporate.*
 
-**Shape-check after Phase 2:** Review what emerged. If the purpose feels like a product description or a generic aspiration, name it: "That reads more like a value proposition than a purpose -- it tells me what you do, not why the world is better because you do it. Let's push one level deeper." Don't move to Phase 3 with a soft purpose.
+**After the questions, generate angles before phrasing.** Don't jump to a single purpose sentence. From the answers, draft three to five candidate purposes, each from a genuinely different underlying motive, and label each by its motive (not just the sentence). Present them together so the user is choosing between *motives*, not between wordings. Choose the motive that rings true, then phrase it. If the user is torn between two, test each as the last line before the vision (the "so that what?" ladder) and see which one the vision wants to follow.
+
+**Shape-check after Phase 2:** Run the chosen purpose against the three tests from SYSTEM.md §2.1:
+- **No-machinery test:** Does it contain a technology or product noun ("AI," "platform," "foundation," "systems")? If so, it's probably the how or what in disguise -- strip the noun and push up.
+- **"So that what?" ladder:** Read it right before the (draft) vision. Does it answer why the vision is worth wanting, or does it just restate it? Purpose sits one level above vision.
+- **Swap test:** Could a competitor lift the line verbatim? If yes, it isn't differentiated -- route back to what this company believes and does that the others don't.
+
+Name the specific failure when one shows up: a product description ("that tells me what you do, not why the world is better because you do it"), or its opposite, a *how dressed as a why* ("that's your approach restated -- it describes how you work, not the reason it matters"). Don't move to Phase 3 with a purpose that fails any test.
 
 ---
 
@@ -177,6 +184,8 @@ Append an entry to `messaging/playbook.md` (create if it doesn't exist).
 A good `purpose-brief.md`:
 - Names a purpose that applies to the company and not to all competitors in the category
 - Distinguishes clearly between purpose (why), mission (what now), and vision (what we're building toward)
+- Passes the three level tests (SYSTEM.md §2.1): no technology/product nouns, answers why the vision is worth wanting, and couldn't be lifted verbatim by a competitor
+- Records the underlying motive behind the purpose line, not just the sentence
 - Is specific enough that a new team member would understand what decisions the company routes back to it
 
 A good `positioning-statement.md`:
